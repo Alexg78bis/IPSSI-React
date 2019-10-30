@@ -1,0 +1,65 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.chat {
+  background-color: #9fdbcd;
+  width: 400px;
+  height: 100%;
+  border-radius: 10px;
+  margin: 10px;
+}
+.messageList {
+  width: 100%;
+  padding: 10px;
+}
+
+.messages {
+  padding: 10px 0;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.messageItem {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.messageItem:first-child{
+  margin: 0;
+}
+
+.messageItem .author {
+  color: gray;
+}
+
+.messageBar {
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.messageBar .message {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.messageBar .send {
+  border: solid #147B74 4px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #147B74;
+  font-size: 20px;
+  font-weight: 900;
+}
