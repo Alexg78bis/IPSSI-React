@@ -13,6 +13,8 @@ class MessageBarComponent extends React.Component {
       message: ''
     }
 
+    console.log(this.state)
+
     this.onMessageChange = this.onMessageChange.bind(this)
     this.onSendBtnClick = this.onSendBtnClick.bind(this)
     this.onEnterKeyPress = this.onEnterKeyPress.bind(this)
@@ -36,7 +38,7 @@ class MessageBarComponent extends React.Component {
     }
 
     this.props.sendMessage({
-      author: 'Me',
+      author: this.props.user.username,
       content: this.state.message,
     })
 
@@ -60,8 +62,16 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
+const mapStateToProps = state => {
+
+  console.log(state.user)
+  return ({
+    user: state.user
+  })
+}
+
 const MessageBar = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(MessageBarComponent)
 
