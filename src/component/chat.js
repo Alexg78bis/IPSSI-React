@@ -1,18 +1,11 @@
 import React from 'react'
-
+import { connect } from 'react-redux'
 import '../styles.css'
-import MessageList from './messageList'
-import MessageBar from './messageBar'
 
-export default class Chat extends React.Component {
+import {getMessages} from '../action'
 
-  render () {
-    return (
-      <div className="chat">
-        <MessageList/>
-        <MessageBar/>
-      </div>
-    )
-  }
-}
+const mapDispatchToProps = {
+  getMessages
+};
 
+export default connect(null, mapDispatchToProps)(Chat)
